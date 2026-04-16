@@ -1,0 +1,321 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s; /* Smooth theme transition */
+}
+
+/* Typography & Colors (Variables for Light Theme) */
+:root {
+    --primary-color: #1a365d; /* Navy Blue */
+    --secondary-color: #2b6cb0; /* Lighter Blue */
+    --accent-color: #e2e8f0; /* Steel Grey */
+    --dark-bg: #1a202c;
+    --light-bg: #f7fafc;
+    
+    --bg-color: #fcfcfc;
+    --text-color: #333;
+    --card-bg-color: #fff;
+    --nav-bg: #fff;
+    --nav-text: #333;
+    --footer-bg: #111;
+    --footer-text: #ccc;
+    --btn-bg: #fff;
+    --btn-text: var(--primary-color);
+    --btn-outline-text: #fff;
+    --border-color: rgba(0,0,0,0.1);
+}
+
+/* Dark Theme Variables (applied to body.dark-mode) */
+body.dark-mode {
+    --bg-color: #000; /* Pure Black Background */
+    --text-color: #f5f5f5; /* Off-white for readability */
+    --card-bg-color: #1c1c1c; /* Distinct grey for cards */
+    --nav-bg: #1c1c1c;
+    --nav-text: #f5f5f5;
+    
+    --primary-color: #61b3ff; /* Lighter Blue that pops */
+    --secondary-color: #90caf9;
+    --accent-color: #333;
+    --dark-bg: #0a0a0a;
+    --light-bg: #1a1a1a;
+    
+    --btn-bg: #333;
+    --btn-text: #f5f5f5;
+    --border-color: rgba(255,255,255,0.1);
+}
+
+.text-center { text-align: center; }
+.text-white { color: #fff; }
+.bg-light { background-color: var(--light-bg); }
+.bg-dark { background-color: var(--dark-bg); color: #fff; }
+
+/* Navigation */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--nav-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.logo span {
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--nav-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+body.dark-mode .icon-sun { display: none; }
+body.dark-mode .icon-moon { display: block; }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Bridge image specific to civil engineering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541888086225-eb4916a0fb4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTB8fGNpdmlsJTIwZW5naW5lZXJpbmd8ZW58MHx8fHwxNjczOTY3MzA5&ixlib=rb-4.0.3&q=80&w=1920') center/cover;
+    color: #fff;
+    padding: 0 20px;
+    margin-top: 60px; /* Offset for navbar */
+    position: relative;
+    transition: background 0.3s;
+}
+
+body.dark-mode .hero {
+    /* Darker overlay in dark mode */
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1541888086225-eb4916a0fb4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTB8fGNpdmlsJTIwZW5naW5lZXJpbmd8ZW58MHx8fHwxNjczOTY3MzA5&ixlib=rb-4.0.3&q=80&w=1920') center/cover;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: var(--dark-bg);
+}
+
+/* Sections */
+.section {
+    padding: 5rem 5%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    position: relative;
+    transition: color 0.3s;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+    transition: background-color 0.3s;
+}
+
+/* Grid Layouts for Skills and Projects */
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Cards */
+.skill-card, .project-card {
+    background: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    overflow: hidden; /* to contain the image */
+    position: relative;
+}
+
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.skill-card h3, .project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+/* Project Card Image Styling */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.project-card:hover img {
+    transform: scale(1.03); /* Subtle zoom effect */
+}
+
+/* Skill card accent border top */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: var(--secondary-color);
+    transition: background-color 0.3s;
+}
+
+/* Contact Info */
+.contact-info {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Animation Styles --- */
+
+/* Keyframes for fade-in slide-up */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for elements to be animated on scroll */
+.animate-on-scroll {
+    opacity: 0;
+}
+
+/* Active class applied by JavaScript */
+.animate-in {
+    animation: fadeInSlideUp 0.6s ease forwards;
+}
+
+/* Stagger animations for list items or grid elements (optional but nice) */
+.skills-grid .animate-in:nth-child(1), .projects-grid .animate-in:nth-child(1) { animation-delay: 0.1s; }
+.skills-grid .animate-in:nth-child(2), .projects-grid .animate-in:nth-child(2) { animation-delay: 0.2s; }
+.skills-grid .animate-in:nth-child(3), .projects-grid .animate-in:nth-child(3) { animation-delay: 0.3s; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* In a real app, you'd add a hamburger menu here */
+    }
+    .hero h1 { font-size: 2.5rem; }
+    #navbar { justify-content: flex-start; } /* for theme btn to be accessible */
+    .theme-btn { margin-left: auto; }
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhil | AI & Data Science Engineer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ash: '#121212',        /* Midnight Ash */
+                        saffron: '#FF7A00',    /* Varanasi Saffron */
+                        'saffron-dark': '#E05A00',
+                        stone: '#2C2F33',      /* Ghat Stone */
+                        ganga: '#4A90E2',      /* Ganga Blue */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .saffron-glow {
+            box-shadow: 0 0 20px rgba(255, 122, 0, 0.4);
+        }
+        .saffron-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 122, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-ash text-gray-300 font-sans antialiased selection:bg-saffron selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-ash/90 backdrop-blur-md border-b border-stone">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-serif font-bold text-white tracking-widest"><span class="text-saffron">A</span>KHIL</a>
+                <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-semibold">
+                    <a href="#about" class="hover:text-saffron transition-colors duration-300">About</a>
+                    <a href="#path" class="hover:text-saffron transition-colors duration-300">Path</a>
+                    <a href="#projects" class="hover:text-saffron transition-colors duration-300">Projects</a>
+                    <a href="#skills" class="hover:text-saffron transition-colors duration-300">Skills</a>
+                    <a href="#contact" class="hover:text-saffron transition-colors duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+        
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center bg-fixed opacity-50"></div>
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-[#121212]/50 via-[#121212]/80 to-[#121212]"></div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-4 w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-16">
+            
+            <div class="md:w-3/5 text-center md:text-left">
+                <h3 class="text-saffron tracking-[0.3em] uppercase text-sm font-bold mb-4 drop-shadow-md">
+                    Vision • Data • Intelligence
+                </h3>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 text-white drop-shadow-lg leading-tight">
+                    Data <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-yellow-400 drop-shadow-none">Scientist</span>
+                </h1>
+                <p class="text-lg md:text-xl font-medium text-gray-300 mb-10 leading-relaxed drop-shadow-md max-w-2xl mx-auto md:mx-0">
+                    I am Akhil, an AI & Data Science Engineer building intelligent systems with focus, clarity, and deep learning. Bridging the gap between raw data and profound insights.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 pt-4 border-t border-stone/50 md:border-none md:pt-0 mt-8 md:mt-0">
+                    <a href="#projects" class="bg-saffron hover:bg-saffron-dark text-white font-bold py-3 px-8 rounded-sm transition-all duration-300 saffron-glow w-full sm:w-auto text-center">
+                        View My Work
+                    </a>
+                    <a href="https://github.com/up65akhil" target="_blank" class="border border-stone hover:border-saffron text-gray-300 hover:text-white font-bold py-3 px-8 rounded-sm transition-all duration-300 w-full sm:w-auto flex justify-center items-center gap-2 bg-[#121212]/50 backdrop-blur-sm">
+                        <i class="fab fa-github"></i> GitHub Profile
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-2/5 flex justify-center md:justify-end">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute inset-0 bg-saffron rounded-full blur-3xl opacity-30"></div>
+                    
+                    <div class="relative z-10 w-full h-full rounded-full overflow-hidden border-4 border-saffron/30 shadow-[0_0_30px_rgba(255,122,0,0.2)] bg-stone flex items-center justify-center">
+                        <img src="https://github.com/up65akhil.png" alt="Akhil - AI Engineer" class="w-full h-full object-cover object-center">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-stone/30 border-t border-b border-stone relative z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-8 text-center"><span class="text-saffron">||</span> About</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    I am Akhil, a Computer Science student, currently based in Lucknow. I am an AI and Machine Learning Engineer who loves building smart systems that can think and learn. My main focus is on Large Language Models (LLMs) and creating the 'brain' (backend) that makes apps work smoothly.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    In my work, I don't just write code, I look for the story behind the data. I use tools like Python, Pandas, Scikit-learn, and Machine Learning to turn raw information into useful insights. I am also active in Open Source.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    I believe in discipline, whether I am at my desk or in the gym. To me, training a computer model is a lot like personal fitness: it takes patience, a strong foundation, and a focus on getting better every single day. I am driven to build technology that is not only powerful but truly helpful for the real world.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="path" class="py-20 bg-ash relative z-10 border-b border-stone">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-12 text-center"><span class="text-saffron">||</span> The Path</h2>
+            
+            <div class="space-y-8">
+                <div class="flex flex-col md:flex-row gap-6 bg-stone p-8 rounded-sm border border-stone hover:border-saffron/50 transition-all duration-300">
+                    <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-gray-700 pb-4 md:pb-0 md:pr-6">
+                        <h4 class="text-saffron font-bold text-lg mb-1">B.Tech Computer Science</h4>
+                        <p class="text-gray-300 font-semibold mb-2">Babu Banarasi Das University</p>
+                        <p class="text-sm text-gray-500"><i class="fa-regular fa-calendar mr-2"></i>Sep 2022 – Jun 2026</p>
+                        <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot mr-2"></i>Lucknow, UP</p>
+                    </div>
+                    <div class="md:w-2/3 md:pl-2 text-gray-400 text-sm leading-relaxed">
+                        <p>Pursuing a comprehensive curriculum focused on core computer science logic, algorithms, and advanced computing. Cultivating a specialized interest in Artificial Intelligence and system architecture while actively contributing to open-source initiatives.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 bg-stone p-8 rounded-sm border border-stone hover:border-saffron/50 transition-all duration-300">
+                    <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-gray-700 pb-4 md:pb-0 md:pr-6">
+                        <h4 class="text-saffron font-bold text-lg mb-1">Intermediate</h4>
+                        <p class="text-gray-300 font-semibold mb-2">Sun Flower Public School</p>
+                        <p class="text-sm text-gray-500"><i class="fa-regular fa-calendar mr-2"></i>Apr 2021 – Mar 2022</p>
+                        <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot mr-2"></i>Ballia, UP</p>
+                    </div>
+                    <div class="md:w-2/3 md:pl-2 text-gray-400 text-sm leading-relaxed">
+                        <p>My Intermediate years were focused on building a solid foundation in Advanced Mathematics. I spent a lot of time practicing Integrals, Derivatives, and Matrices. It was a journey of constant growth, where every new chapter challenged me to think differently. </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 bg-stone p-8 rounded-sm border border-stone hover:border-saffron/50 transition-all duration-300">
+                    <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-gray-700 pb-4 md:pb-0 md:pr-6">
+                        <h4 class="text-saffron font-bold text-lg mb-1">High School</h4>
+                        <p class="text-gray-300 font-semibold mb-2">Sun Flower Public School</p>
+                        <p class="text-sm text-gray-500"><i class="fa-regular fa-calendar mr-2"></i>Apr 2019 – JMar 2020</p>
+                        <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot mr-2"></i>Ballia, UP</p>
+                    </div>
+                    <div class="md:w-2/3 md:pl-2 text-gray-400 text-sm leading-relaxed">
+                        <p>High school was the first time I faced serious academic goals. Preparing for my Board exams required a lot of hard work, consistent practice, and focus. It was a journey of building confidence, making mistakes, and realizing that effort is the most important part of any achievement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-stone/20 relative z-10 border-b border-stone">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-12 text-center"><span class="text-saffron">||</span> Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="project-container">
+                
+                <a href="https://hypertension-prediction-up65akhil.streamlit.app/" class="bg-stone p-8 rounded-sm border border-stone hover:border-saffron transition-all duration-500 group relative overflow-hidden default-project">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-saffron transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-white">Hypertension Risk Prediction</h3>
+                        <i class="fa-solid fa-heart-pulse text-saffron opacity-50 text-xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Developed a machine learning model that predicts high blood pressure risk with 85% accuracy. By analyzing a dataset of over 5,000 patient records, the system identifies critical risk factors using a Random Forest classifier. </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-brands fa-python mr-1"></i>Python</span>
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-brain mr-1"></i>Machine Learning</span>
+                    </div>
+                </a>
+
+                <a href = '#' class="bg-stone p-8 rounded-sm border border-stone hover:border-saffron transition-all duration-500 group relative overflow-hidden default-project">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-saffron transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-white">Prompt-to-UI Generator</h3>
+                        <i class="fa-solid fa-layer-group text-saffron opacity-50 text-xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">A specialized tool integrating Ollama and Groq APIs to seamlessly convert natural language prompts into functional UI components using advanced LLM reasoning.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-robot mr-1"></i>LLMs</span>
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-network-wired mr-1"></i>Groq API</span>
+                    </div>
+                </a>
+
+                <a href="https://sentiment-analysis-z4wq.onrender.com/" class="bg-stone p-8 rounded-sm border border-stone hover:border-saffron transition-all duration-500 group relative overflow-hidden default-project">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-saffron transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-white">Sentiment Analysis</h3>
+                        <i class="fa-solid fa-code-commit text-saffron opacity-50 text-xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">I built an AI tool that reads a sentence and automatically decides if the meaning is Positive or Negative. By training the model on thousands of movie and product reviews, the system can understand human emotions in text with over 90% accuracy.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-brain mr-1"></i>Machine Learning</span>
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-brands fa-python mr-1"></i>Python</span>
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-spray-can-sparkles mr-1"></i>NLP</span>
+                    </div>
+                </a>
+
+                <div class="bg-stone p-8 rounded-sm border border-stone hover:border-saffron transition-all duration-500 group relative overflow-hidden default-project">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-saffron transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-white">Hypertension Risk Analysis</h3>
+                        <i class="fa-solid fa-heart-pulse text-saffron opacity-50 text-xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">A data-driven project identifying healthcare trends and critical risk factors for hypertension using structured database querying and statistical analysis.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-database mr-1"></i>SQL</span>
+                        <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-chart-pie mr-1"></i>Data Analysis</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-ash relative z-10 border-b border-stone">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6 text-center"><span class="text-saffron">||</span> Skills </h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">A finely tuned stack of technologies engineered for performance, deep learning, and scalable architecture.</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-brands fa-python text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">Python</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-brain text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">MachineLearning</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-robot text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">LLMs / Groq</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-database text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">SQL</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-server text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">FastAPI</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-table-list text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">Pandas</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-chart-line text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">Streamlit</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-brain text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">Deep Learning</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-brands fa-git-alt text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">Git</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-brands fa-github text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">GitHub</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-layer-group text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">RAG</span>
+                </div>
+                <div class="bg-stone/50 hover:bg-stone border border-stone hover:border-saffron p-6 rounded flex flex-col items-center justify-center transition-all duration-300">
+                    <i class="fa-solid fa-cubes text-4xl text-saffron mb-3"></i>
+                    <span class="text-sm font-semibold text-gray-200">Tensorflow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-stone/30 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Let's Build Something Impactful</h2>
+            <p class="text-gray-400 mb-10">Currently open for AI Engineering roles and exciting open-source collaborations.</p>
+            
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="https://www.linkedin.com/in/up65akhil/" class="w-14 h-14 rounded-full bg-ash border border-stone flex items-center justify-center text-white hover:border-saffron hover:text-saffron transition-all duration-300 text-xl shadow-lg">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/up65akhil" class="w-14 h-14 rounded-full bg-ash border border-stone flex items-center justify-center text-white hover:border-saffron hover:text-saffron transition-all duration-300 text-xl shadow-lg">
+                    <i class="fab fa-github"></i>
+                </a> 
+                <a href="mailto:akhilsingh1541@gmail.com" class="w-14 h-14 rounded-full bg-ash border border-stone flex items-center justify-center text-white hover:border-saffron hover:text-saffron transition-all duration-300 text-xl shadow-lg">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0a0a0a] py-6 border-t border-stone text-center relative z-10">
+        <p class="text-gray-500 text-sm">© 2025 Akhil. Designed with precision and purpose.</p>
+    </footer>
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+
+        async function loadProjects() {
+            try {
+                const response = await fetch('/projects.json');
+                if (!response.ok) return; 
+                
+                const data = await response.json();
+                const projectContainer = document.getElementById('project-container');
+                
+                if (data.items && data.items.length > 0) {
+                    projectContainer.innerHTML = ''; 
+
+                    data.items.forEach(project => {
+                        const tagsHTML = project.tags ? project.tags.split(',').map(tag => 
+                            `<span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full">${tag.trim()}</span>`
+                        ).join('') : '';
+
+                        const iconClass = project.icon ? project.icon : 'fa-solid fa-code';
+
+                        const cardHTML = `
+                        <div class="bg-stone p-8 rounded-sm border border-stone hover:border-saffron transition-all duration-500 group relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-saffron transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-2xl font-bold text-white">${project.title}</h3>
+                                <i class="${iconClass} text-saffron opacity-50 text-xl"></i>
+                            </div>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">${project.description}</p>
+                            <div class="flex flex-wrap gap-2">
+                                ${tagsHTML}
+                            </div>
+                        </div>`;
+                        
+                        projectContainer.innerHTML += cardHTML;
+                    });
+                }
+            } catch (error) {
+                console.log("Using default project display. CMS projects will load here once configured on Netlify.");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main # Or master, depending on your GitHub repository
+
+media_folder: "images" # Folder where uploaded images are saved
+public_folder: "/images"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Content"
+    files:
+      - label: "Projects"
+        name: "projects"
+        file: "projects.json"
+        fields:
+          - label: "Project List"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Tags (comma separated)", name: "tags", widget: "string", hint: "e.g., Python, SQL, Machine Learning"}
+              - {label: "FontAwesome Icon Class", name: "icon", widget: "string", default: "fa-solid fa-code", hint: "e.g., fa-solid fa-brain"}
