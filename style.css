@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +10,12 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
-    transition: background-color 0.3s, color 0.3s; /* Smooth theme transition */
+    transition: background-color 0.3s, color 0.3s; 
 }
-
-/* Typography & Colors (Variables for Light Theme) */
 :root {
-    --primary-color: #1a365d; /* Navy Blue */
-    --secondary-color: #2b6cb0; /* Lighter Blue */
-    --accent-color: #e2e8f0; /* Steel Grey */
+    --primary-color: #1a365d; 
+    --secondary-color: #2b6cb0; 
+    --accent-color: #e2e8f0; 
     --dark-bg: #1a202c;
     --light-bg: #f7fafc;
     
@@ -33,16 +31,14 @@ body {
     --btn-outline-text: #fff;
     --border-color: rgba(0,0,0,0.1);
 }
-
-/* Dark Theme Variables (applied to body.dark-mode) */
 body.dark-mode {
-    --bg-color: #000; /* Pure Black Background */
-    --text-color: #f5f5f5; /* Off-white for readability */
-    --card-bg-color: #1c1c1c; /* Distinct grey for cards */
+    --bg-color: #000; 
+    --text-color: #f5f5f5;
+    --card-bg-color: #1c1c1c; 
     --nav-bg: #1c1c1c;
     --nav-text: #f5f5f5;
     
-    --primary-color: #61b3ff; /* Lighter Blue that pops */
+    --primary-color: #61b3ff;
     --secondary-color: #90caf9;
     --accent-color: #333;
     --dark-bg: #0a0a0a;
@@ -58,7 +54,6 @@ body.dark-mode {
 .bg-light { background-color: var(--light-bg); }
 .bg-dark { background-color: var(--dark-bg); color: #fff; }
 
-/* Navigation */
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -102,7 +97,6 @@ body.dark-mode {
     color: var(--secondary-color);
 }
 
-/* Theme Toggle Button */
 .theme-btn {
     background: none;
     border: none;
@@ -119,24 +113,22 @@ body.dark-mode {
 body.dark-mode .icon-sun { display: none; }
 body.dark-mode .icon-moon { display: block; }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Bridge image specific to civil engineering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541888086225-eb4916a0fb4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTB8fGNpdmlsJTIwZW5naW5lZXJpbmd8ZW58MHx8fHwxNjczOTY3MzA5&ixlib=rb-4.0.3&q=80&w=1920') center/cover;
     color: #fff;
     padding: 0 20px;
-    margin-top: 60px; /* Offset for navbar */
+    margin-top: 60px; 
     position: relative;
     transition: background 0.3s;
 }
 
 body.dark-mode .hero {
-    /* Darker overlay in dark mode */
+   
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1541888086225-eb4916a0fb4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTB8fGNpdmlsJTIwZW5naW5lZXJpbmd8ZW58MHx8fHwxNjczOTY3MzA5&ixlib=rb-4.0.3&q=80&w=1920') center/cover;
 }
 
@@ -156,8 +148,6 @@ body.dark-mode .hero {
     max-width: 600px;
     margin: 0 auto 30px;
 }
-
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 10px 25px;
@@ -185,7 +175,6 @@ body.dark-mode .hero {
     color: var(--dark-bg);
 }
 
-/* Sections */
 .section {
     padding: 5rem 5%;
 }
@@ -214,21 +203,19 @@ body.dark-mode .hero {
     transition: background-color 0.3s;
 }
 
-/* Grid Layouts for Skills and Projects */
 .skills-grid, .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-/* Cards */
 .skill-card, .project-card {
     background: var(--card-bg-color);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    overflow: hidden; /* to contain the image */
+    overflow: hidden; 
     position: relative;
 }
 
@@ -242,8 +229,6 @@ body.dark-mode .hero {
     margin-bottom: 1rem;
     transition: color 0.3s;
 }
-
-/* Project Card Image Styling */
 .project-card img {
     width: 100%;
     height: 200px;
@@ -254,10 +239,9 @@ body.dark-mode .hero {
 }
 
 .project-card:hover img {
-    transform: scale(1.03); /* Subtle zoom effect */
+    transform: scale(1.03); 
 }
 
-/* Skill card accent border top */
 .skill-card::before {
     content: '';
     position: absolute;
@@ -266,13 +250,11 @@ body.dark-mode .hero {
     transition: background-color 0.3s;
 }
 
-/* Contact Info */
 .contact-info {
     margin: 2rem 0;
     font-size: 1.2rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -281,9 +263,6 @@ footer {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* --- Animation Styles --- */
-
-/* Keyframes for fade-in slide-up */
 @keyframes fadeInSlideUp {
     0% {
         opacity: 0;
@@ -295,17 +274,14 @@ footer {
     }
 }
 
-/* Initial state for elements to be animated on scroll */
 .animate-on-scroll {
     opacity: 0;
 }
 
-/* Active class applied by JavaScript */
 .animate-in {
     animation: fadeInSlideUp 0.6s ease forwards;
 }
 
-/* Stagger animations for list items or grid elements (optional but nice) */
 .skills-grid .animate-in:nth-child(1), .projects-grid .animate-in:nth-child(1) { animation-delay: 0.1s; }
 .skills-grid .animate-in:nth-child(2), .projects-grid .animate-in:nth-child(2) { animation-delay: 0.2s; }
 .skills-grid .animate-in:nth-child(3), .projects-grid .animate-in:nth-child(3) { animation-delay: 0.3s; }
@@ -313,9 +289,29 @@ footer {
 /* Responsive tweaks */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* In a real app, you'd add a hamburger menu here */
+        display: none;
     }
     .hero h1 { font-size: 2.5rem; }
-    #navbar { justify-content: flex-start; } /* for theme btn to be accessible */
+    #navbar { justify-content: flex-start; }
     .theme-btn { margin-left: auto; }
+}
+.saffron-glow {
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.4);
+}
+.saffron-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 122, 0, 0.7);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #121212;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #2C2F33;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #FF7A00;
 }
