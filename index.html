@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
@@ -19,11 +21,11 @@
             theme: {
                 extend: {
                     colors: {
-                        ash: '#121212',        /* Midnight Ash */
-                        saffron: '#FF7A00',    /* Varanasi Saffron */
+                        ash: '#121212',       
+                        saffron: '#FF7A00',   
                         'saffron-dark': '#E05A00',
-                        stone: '#2C2F33',      /* Ghat Stone */
-                        ganga: '#4A90E2',      /* Ganga Blue */
+                        stone: '#2C2F33',     
+                        ganga: '#4A90E2',    
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -33,14 +35,6 @@
             }
         }
     </script>
-    <style>
-        .saffron-glow {
-            box-shadow: 0 0 20px rgba(255, 122, 0, 0.4);
-        }
-        .saffron-glow:hover {
-            box-shadow: 0 0 30px rgba(255, 122, 0, 0.7);
-        }
-    </style>
 </head>
 <body class="bg-ash text-gray-300 font-sans antialiased selection:bg-saffron selection:text-white">
 
@@ -207,7 +201,6 @@
                     </div>
                 </a>
                 
-
                 <a href="https://ai-code-assistant-6pd9.vercel.app/" class="bg-stone p-8 rounded-sm border border-stone hover:border-saffron transition-all duration-500 group relative overflow-hidden default-project">
                     <div class="absolute top-0 left-0 w-full h-1 bg-saffron transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                     <div class="flex justify-between items-start mb-3">
@@ -243,7 +236,6 @@
                     </div>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">An interactive Retrieval-Augmented Generation (RAG) web application that transforms any YouTube video into a live chat stream. Built with FastAPI, LangChain, FAISS, and Google Gemini, this tool indexes video transcripts in seconds and delivers precise, context-aware answers inside an authentic YouTube Dark Mode interface.</p>
                     <div class="flex flex-wrap gap-2">
-                        <!-- <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-brain mr-1"></i>Machine Learning</span> -->
                         <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-brands fa-python mr-1"></i>Python</span>
                         <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-link mr-1"></i>LangChain</span>
                         <span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full"><i class="fa-solid fa-database mr-1"></i>RAG</span>
@@ -336,68 +328,36 @@
         <p class="text-gray-500 text-sm">© 2025 Akhil. Designed with precision and purpose.</p>
     </footer>
 
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-
-        async function loadProjects() {
-            try {
-                const response = await fetch('/projects.json');
-                if (!response.ok) return; 
-                
-                const data = await response.json();
-                const projectContainer = document.getElementById('project-container');
-                
-                if (data.items && data.items.length > 0) {
-                    projectContainer.innerHTML = ''; 
-
-                    data.items.forEach(project => {
-                        const tagsHTML = project.tags ? project.tags.split(',').map(tag => 
-                            `<span class="text-xs text-ganga bg-ganga/10 px-3 py-1 rounded-full">${tag.trim()}</span>`
-                        ).join('') : '';
-
-                        const iconClass = project.icon ? project.icon : 'fa-solid fa-code';
-
-                        const cardHTML = `
-                        <div class="bg-stone p-8 rounded-sm border border-stone hover:border-saffron transition-all duration-500 group relative overflow-hidden">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-saffron transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-2xl font-bold text-white">${project.title}</h3>
-                                <i class="${iconClass} text-saffron opacity-50 text-xl"></i>
-                            </div>
-                            <p class="text-gray-400 mb-6 text-sm leading-relaxed">${project.description}</p>
-                            <div class="flex flex-wrap gap-2">
-                                ${tagsHTML}
-                            </div>
-                        </div>`;
-                        
-                        projectContainer.innerHTML += cardHTML;
-                    });
-                }
-            } catch (error) {
-                console.log("Using default project display. CMS projects will load here once configured on Netlify.");
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadProjects);
-    </script>
-    <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+    <div id="chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
+        
+        <div id="chat-box" class="hidden w-80 sm:w-96 bg-stone border border-saffron/30 rounded-md shadow-[0_0_30px_rgba(0,0,0,0.8)] mb-4 flex flex-col transition-all duration-300 transform origin-bottom-right">
+            
+            <div class="bg-[#121212] px-4 py-3 border-b border-saffron/30 flex justify-between items-center rounded-t-md">
+                <h3 class="text-white font-serif font-bold flex items-center gap-2 tracking-wider text-sm">
+                    <i class="fa-solid fa-robot text-saffron"></i> AI Assistant
+                </h3>
+                <button id="close-chat" class="text-gray-400 hover:text-saffron transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div id="chat-messages" class="p-4 h-72 overflow-y-auto flex flex-col gap-3 bg-[#121212]/90 text-sm custom-scrollbar">
+                <div class="bg-stone p-3 rounded-r-md rounded-bl-md text-gray-300 max-w-[85%] border border-saffron/20 self-start shadow-sm">
+                    Hi! I'm Akhil's AI assistant. Feel free to ask me about his Data Science projects, tech stack, or background!
+                </div>
+            </div>
+            
+            <div class="p-3 bg-[#121212] border-t border-saffron/30 flex gap-2 rounded-b-md">
+                <input type="text" id="chat-input" placeholder="Ask something..." class="flex-1 bg-stone text-white px-3 py-2 rounded-sm border border-stone focus:border-saffron focus:outline-none transition-colors text-sm placeholder-gray-500">
+                <button id="send-chat" class="bg-saffron hover:bg-saffron-dark text-white px-4 py-2 rounded-sm transition-all duration-300 saffron-glow flex items-center justify-center">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <button id="chat-toggle" class="w-14 h-14 bg-saffron hover:bg-saffron-dark text-white rounded-full transition-all duration-300 saffron-glow flex items-center justify-center text-xl shadow-lg border-2 border-stone">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
